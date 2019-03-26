@@ -1,0 +1,10 @@
+<div class="media text-muted pt-3">
+        {# {% set initials = post.user.username|split(' ') %} #}
+        {# <h6>{{ attribute(initials, 0)|first }}{{ attribute(initials, 1)|first }}</h6> #}
+        <a href="{{ path('micro_post_user', { 'username': post.user.username }) }}"><h6>{{ post.user.username }}</h6></a>
+        <p class="media-body"><small> {{ post.time|date("d/m/Y")  }} </small>
+            <a href="{{ path('micro_post_post', {'id' : post.id}) }}">
+                {{ post.text }}
+            </a>
+        </p>
+</div>

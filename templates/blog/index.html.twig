@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index!{% endblock %}
+
+{% block body %}
+    {% for post in posts %}
+        <p><a href="http://symfony-01.local/index.php/blog/show/">Enter</a></p>
+        <h3>{{ post.title | upper}}</h3>
+        <p>{{ post.text }}</p>
+        <p> {{123|price}}
+        </p>
+
+        <p> here is the locale {{ locale }} </p>
+        <p> {{ message }} </p>
+    {% endfor %}
+{% endblock %}
